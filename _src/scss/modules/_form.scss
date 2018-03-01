@@ -1,0 +1,61 @@
+.form {
+    $self: &;
+    @extend %boxFull;
+    padding-right: 0%;
+    @include respond-to(sm) {
+        padding-right: 15%;
+    }
+    @include e('input') {
+        // input[type="text"], input[type="email"] {
+        // 	background: #1b598a;
+        // 	color: #fff;
+        // }
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            border: 1px solid #ccc;
+            padding: 14px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            font-size: rem(16);
+            // &::placeholder {
+            // 	color: #fff;
+            // }
+        }
+        @include m('contato') {
+            max-width: 100%$i;
+            input {
+                background: #008aff;
+                text-transform: uppercase;
+                color: $White;
+                border: 0;
+                padding: 15px;
+                cursor: pointer;
+            }
+            @include respond-to(sm) {
+                max-width: 196px;
+            }
+        }
+    }
+    @include m('newsletter') {
+        padding-right: 0;
+        @include e('input', $self) {
+            width: 100%$i;
+            float: left;
+            margin-right: 1%;
+            @include respond-to(sm) {
+                width: 35%$i;
+            }
+            @include m('btn') {
+                width: 100%$i;
+                @include respond-to(sm) {
+                    width: 25%$i;
+                }
+                input {
+                    cursor: pointer$i;
+                }
+            }
+        }
+    }
+}

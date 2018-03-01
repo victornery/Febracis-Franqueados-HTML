@@ -1,0 +1,37 @@
+{
+  "name": "",
+  "description": "Tema feito sobe medida para Aval Engenharia",
+  "version": "0.0.1",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-changed": "",
+    "gulp-concat": "",
+    "gulp-cssnano": "",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-if": "",
+    "gulp-imagemin": "",
+    "gulp-sass": "",
+    "gulp-sourcemaps": "",
+    "gulp-spritesmith": "",
+    "gulp-uglify": "",
+    "gulp-util": "",
+    "jeet": "",
+    "sprity": ""
+  },
+  "author": "Allef Silva",
+  "license": "ISC",
+  "dependencies": {
+    "hover.css": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": ""
+}

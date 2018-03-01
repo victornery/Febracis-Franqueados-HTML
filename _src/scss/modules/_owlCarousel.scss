@@ -1,0 +1,82 @@
+// Center Position
+%centerPositionAll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.owl-carousel {
+    .owl-controls {
+        @extend %boxFull;
+    }
+    .owl-nav {
+        display: block;
+    }
+    .owl-prev {
+        background: url(../images/prev.png)no-repeat;
+        left: 50px !important;
+    }
+    .owl-next {
+        background: url(../images/next.png)no-repeat;
+        right: 50px !important;
+    }
+    .owl-prev,
+    .owl-next {
+        @include size(50px);
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        z-index: 999;
+        top: 50%;
+        font-size: 0;
+        height: 31px;
+        width: 18px;
+        left: 0%;
+        transform: translateY(-50%);
+        transition: all .2s ease-in-out;
+        @include respond-to(lg) {
+            //left: -9%;
+        }
+        &:before {
+            //@extend .fa;
+            //@extend .fa-angle-left;
+            @extend %centerPositionAll;
+            color: #ccc;
+            font-size: rem(38);
+            z-index: 99;
+        }
+        &:hover,
+        &:focus {
+            // background-color: rgba($cor-primaria, .9);
+        }
+    }
+    .owl-next {
+        left: auto;
+        right: 0%;
+        //transform: translateY(-50%) rotate(180deg);
+        @include respond-to(lg) {
+            //right: -9%;
+        }
+    }
+    .owl-dots {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        transform: translateY(150%);
+        @include respond-to(sm) {
+            transform: translateY(750%);
+        }
+    }
+    .owl-dots .owl-dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        margin: 0 5px;
+    }
+    #banner .owl-dots .owl-dot.active {
+        background-color: #000;
+    }
+}

@@ -1,0 +1,19 @@
+//==========================================================================
+// VARIAVEIS
+// Definição das variavéis do Tema
+// Não remover nenhuma das variavéis para evitar crash do SASS
+//==========================================================================
+// FONTS
+//light - regular - semi-bold - bold
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700');
+$font-default: 'Lato',
+Arial,
+helvetica,
+sans-serif !default;
+$font-secundaria: 'Lato' !default;
+$font-header: $font-default;
+// DEFAULT RADIUS
+$border-radius: 5px;
+// CSS VARS
+$i: !important;
+$t: transparent;
