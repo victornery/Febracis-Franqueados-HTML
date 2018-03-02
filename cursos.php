@@ -1,20 +1,77 @@
-<?php get_template_part('templates/frontpage','header');?>
-<!-- <section class="pageblocos blognews">
-    <div class="container">
-        <div class="header header--interna">
-            <h2 class="header__titulo header__titulo--interna">
-                Notícias: <?php //echo single_cat_title(); ?>
-            </h2>
-        </div>
-    </div>
-    <div class="container noticia-single">
-        <div class="blognews__posts noticia-single__post">
-            <?php //while (have_posts()) : the_post();
-                //get_template_part('templates/loop','blog');
-            //endwhile;
-            //wp_pagenav($wp_query->max_num_pages); wp_reset_postdata(); ?>
-        </div>
-        <?php //get_template_part('templates/sidebar', 'blog'); ?>
-    </div>
-</section> -->
-<?php get_template_part('templates/section','footer');?>
+<?php require('templates/html-header.php');?>
+    <nav class="febra-nav">
+        <ul>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 35 23" class="febra-svg">
+                            <use href="assets/icons/icons.svg#icon-logo-icon"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 160 110" class="febra-svg">
+                        <use href="assets/icons/icons.svg#icon-courses"></use>
+                    </svg>
+                    <span class="febra-nav__name">Cursos</span>
+                </a>
+                <ul class="febra-nav__sub">
+                    <li>Grade Green Belt
+                        <ul class="febra-nav__sub__items">
+                            <li>Método CIS</li>
+                            <li>Business High Performance</li>
+                            <li>Formação em Coaching</li>
+                            <li>Formação de Palestrantes</li>
+                            <li>CIS Assessment</li>
+                            <li>Fator de Enriquecimento</li>
+                            <li>Coaching for Money</li>
+                        </ul>
+                    </li>
+                    <li>Grade Green Belt
+                        <ul class="febra-nav__sub__items">
+                            <li>Método CIS</li>
+                            <li>Business High Performance</li>
+                            <li>Formação em Coaching</li>
+                            <li>Formação de Palestrantes</li>
+                            <li>CIS Assessment</li>
+                            <li>Fator de Enriquecimento</li>
+                            <li>Coaching for Money</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 160 110" class="febra-svg">
+                        <use href="assets/icons/icons.svg#icon-speech"></use>
+                    </svg>
+                    <span class="febra-nav__name">Palestras</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 160 110" class="febra-svg">
+                        <use href="assets/icons/icons.svg#icon-department"></use>
+                    </svg>
+                    <span class="febra-nav__name">Setores</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 160 110" class="febra-svg">
+                        <use href="assets/icons/icons.svg#icon-other-courses"></use>
+                    </svg>
+                    <span class="febra-nav__name">Outros cursos</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg viewBox="0 0 160 90" class="febra-svg">
+                        <use href="assets/icons/icons.svg#icon-dont-found"></use>
+                    </svg>
+                    <span class="febra-nav__name">Não achou o arquivo?</span> 
+                </a>
+            </li>
+        </ul>
+    </nav>
+<?php require('templates/html-footer.php');?>

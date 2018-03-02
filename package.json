@@ -16,6 +16,8 @@
     "gulp-sass": "",
     "gulp-sourcemaps": "",
     "gulp-spritesmith": "",
+    "gulp-svgo": "^1.4.0",
+    "gulp-svgstore": "^6.1.1",
     "gulp-uglify": "",
     "gulp-util": "",
     "jeet": "",
@@ -24,6 +26,7 @@
   "author": "Allef Silva",
   "license": "ISC",
   "dependencies": {
+    "gulp-rename": "^1.2.2",
     "hover.css": "^2.2.1"
   },
   "scripts": {

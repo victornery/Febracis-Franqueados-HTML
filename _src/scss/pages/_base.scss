@@ -1,3 +1,6 @@
 @import 'courses';
 @import 'divulgation';
 @import 'login';
+body {
+    font-family: $font-default;
+}

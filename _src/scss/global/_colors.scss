@@ -11,13 +11,13 @@
 // **
 // Project colors
 // Map from colors default from the project.
-$colors: ( white: #fff, whiteSmoke: #f1f1f1, black: #000, blue: #092945, gray: #b7b7b7, darkGray: #c2c2c2, darkenGray: #595959, green: #00a651, // semantic colors
+$colors: ( white: #fff, whiteSmoke: #f1f1f1, black: #000, blue: #092945, gray: #3f3f3f, darkGray: #c2c2c2, darkenGray: #595959, green: #00a651, red: #a62721, // semantic colors
 // sucess, error, information
-semantic:( sucess : #12bc00, info : #0a84ff, warning: #d76e00, error : #d70022), // default colors
+semantic:( sucess: #12bc00, info: #0a84ff, warning: #d76e00, error: #d70022), // default colors
 // brand color, link, button, etc
-main:( primary : orange, // brand logo
+main:( primary: orange, // brand logo
 secondary: silver, // brand logo sec
-link : #45a1ff));
+link: #45a1ff));
 // Color = cl
 // Colors function
 @function cl($color-name, $color-variant: null) {

@@ -1,20 +1,19 @@
-<?php get_template_part('templates/frontpage','header');?>
-<!-- <section class="pageblocos blognews">
+<?php require('templates/html-header.php');?>
+<header class="febra-login">
     <div class="container">
-        <div class="header header--interna">
-            <h2 class="header__titulo header__titulo--interna">
-                Notícias: <?php //echo single_cat_title(); ?>
-            </h2>
+        <div class="febra-box febra-box--login">
+            <svg viewBox="0 0 160 110" class="febra-svg febra-svg--logo">
+                <use href="assets/icons/icons.svg#icon-logo-home"></use>
+            </svg>
+            <h1 class="febra-title febra-title--medium">Acesso exclusivo para franqueados e parceiros Febracis</h1>
+            <form class="febra-form febra-form--login" action="#" method="post">
+                <input type="text" name="user" id="user_login" value="" placeholder="Seu usuário ou e-mail">
+                <input type="password" name="pass" id="pass_login" value="" placeholder="Senha">
+                <div class="febra-form__checkbox">
+                    <input type="checkbox" id="remember"> <label for="remember">Lembrar-me</label>
+                </div>
+            </form>
         </div>
     </div>
-    <div class="container noticia-single">
-        <div class="blognews__posts noticia-single__post">
-            <?php //while (have_posts()) : the_post();
-                //get_template_part('templates/loop','blog');
-            //endwhile;
-            //wp_pagenav($wp_query->max_num_pages); wp_reset_postdata(); ?>
-        </div>
-        <?php //get_template_part('templates/sidebar', 'blog'); ?>
-    </div>
-</section> -->
-<?php get_template_part('templates/section','footer');?>
+</header>
+<?php require('templates/html-footer.php');?>

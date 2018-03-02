@@ -3,7 +3,7 @@
 //Diretorio PROD : /assets
 
 'use strict';
-var gulp, path, sass, cssnano, sourcemaps, concat, uglify, browserSync, browsersup, gutil, imagemin, spritesmith, changed, gulpif, sprity;
+var gulp, path, sass, cssnano, sourcemaps, concat, uglify, browserSync, browsersup, gutil, imagemin, spritesmith, changed, gulpif, sprity, svgo, svgstore, rename;
 
 //Diretorios
 path = {
@@ -12,6 +12,8 @@ path = {
     proxy: 'http://projetos.franqueados'
 }
 
+var buildpath = './assets';
+
 //Carregamento de modulos
 gulp = require('gulp');
 gutil = require('gulp-util');
@@ -19,12 +21,13 @@ browserSync = require('browser-sync').create();
 sass = require('gulp-sass');
 uglify = require('gulp-uglify');
 imagemin = require('gulp-imagemin');
-
+svgstore = require('gulp-svgstore');
+rename = require('gulp-rename');
+svgo = require('gulp-svgo');
 sprity = require('sprity');
 spritesmith = require("gulp-spritesmith");
 changed = require('gulp-changed');
 gulpif = require("gulp-if");
-
 sourcemaps = require('gulp-sourcemaps');
 concat = require('gulp-concat');
 cssnano = require('gulp-cssnano');
@@ -86,6 +89,22 @@ gulp.task('sass', function() {
     //Arquivo SCSS principal que deve importar todos os outros
 });
 
+gulp.task('svgo', function() {
+    return gulp.src(path.dev + '/icons/*.svg')
+        .pipe(svgo())
+        .pipe(gulp.dest(path.prod + '/icons'));
+});
+
+gulp.task('svgstore', ['svgo'], function() {
+    return gulp
+        .src(path.dev + '/icons/*.svg')
+        .pipe(rename({
+            prefix: 'icon-'
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest(path.prod + '/icons'));
+});
+
 //compiling our Javascripts
 gulp.task('scripts', function() {
     //this is where our dev JS scripts are
@@ -136,6 +155,7 @@ gulp.task('fonts', function() {
 gulp.task('default', ['sinc', 'scripts', 'images', 'sass'], function() {
     gulp.watch(path.dev + '/scss/**/*.scss', ['sass']);
     gulp.watch(path.dev + '/js/*.js', ['scripts']);
+    gulp.watch(path.dev + '/icons/*.svg', ['svgstore']);
     gulp.watch(path.dev + '/images/*', ['images']);
     gulp.watch('*.php').on('change', browserSync.reload);
 });
